@@ -2,31 +2,26 @@
 
 웹을 지배하는 가장 중요한 문법 태그 
 
-<strong> </strong>  // 이것은 진하게 표시하기 
+strong   // 이것은 진하게 표시하기 
 
-<u>  </u>  // 언더라인
+u // 언더라인
 
-<h1> </h1> // 제목
+h1 // 제목
 
-<p> </p> // 단락을 나눠주는 태그 하지만 단락이 고정되어 있으므로 CSS를 통해서 단락의 간겨을 세밀하게 조정해줘야 한다. 
+p  // 단락을 나눠주는 태그 하지만 단락이 고정되어 있으므로 CSS를 통해서 단락의 간겨을 세밀하게 조정해줘야 한다. 
 
-<img src=" "> // " "사이에 파일주소 혹은 url지정
+img src=" " // " "사이에 파일주소 혹은 url지정
 
-<li> </li> // li 리스트를 만드는 태크 
-<ul> </ul> //  만들어진 리스트를 목록으로 구분하는 태그
+li // 리스트를 만드는 태크 
+ul //  만들어진 리스트를 목록으로 구분하는 태그
 
-<!DOCTYPE html> // html임을 알려주는 태그
-<html>	// html임을 알려주는 태그
-<head> // 익스플로러 상단 바 제목
-	<title></title> 익스플로러 상단 바 제목
-</head>
-<body> // 홈페이지 내용
+!DOCTYPE html // html임을 알려주는 태그
+html	// html임을 알려주는 태그
+head // 익스플로러 상단 바 제목
+	title 익스플로러 상단 바 제목
+body // 홈페이지 내용
 
-</body>
-</html>
-
-// 링크 태그 
-<a href="https://www.w3.org/TR/html5/" target="_blank" title="html5 specification">Hypertext Markup Language (HTML)</a>
+a href= ""  /a << 링크를 걸수있게 해주는 태크
 //target="_blank" 새창에서 열리게 하는 속성
 
-/'<div> </div>'/ // 박스로 구간 나누기 
+div // 박스로 구간 나누기 
