@@ -29,4 +29,4 @@
 <a href="https://www.w3.org/TR/html5/" target="_blank" title="html5 specification">Hypertext Markup Language (HTML)</a>
 //target="_blank" 새창에서 열리게 하는 속성
 
-<div> </div> // 박스로 구간 나누기 
+/'<div> </div>'/ // 박스로 구간 나누기 
