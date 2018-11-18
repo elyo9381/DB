@@ -149,7 +149,10 @@
 			<tr>
    			 <td width='100%' height='auto' align='center' valign='middle'>
 
-			<A  href= >
+			<A  href= view.php?model_name=<?=$data[model_name]?> >
+<!-- 
+			&ctg=<?=$data[ctg]?>&page=<?=$page?>&Search_mode=<?=$Search_mode?>  -->
+
 			<img src='./image/<?=$data[image_path]?>' width='95%' height='AUTO' border='0' onmouseover='this.style.filter="alpha(opacity=60)"' onmouseout='this.style.filter=""'></a>
 
 			</td>

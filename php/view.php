@@ -3,6 +3,14 @@
 <html>
 <head>
 <title>Page Title</title>
+
+<?
+		include("./db_connect.php");
+		$conn=dbconn();
+		$member=member();
+		?>
+
+
 <meta charset="utf-8">
 <link rel="stylesheet" href="./assets/reset.css"/>
 <link rel="stylesheet" type="text/css" href="./assets/common.css"/>
@@ -22,7 +30,6 @@
 				<li class="navigation_list"><a href="" class="navigation_link">리뷰</a></li>
 				<li class="navigation_list"><a href="" class="navigation_link">카쉐어링</a></li>
 				<li class="navigation_list"><a href="" class="navigation_link">공지사항</a></li>
-				<li class="navigation_list"><a href="" class="navigation_link">이미지삽입</a></li>
 			</ul>
 		</div>
 	</div>
@@ -37,6 +44,17 @@
 			
 		</div>
 
+
+		<?
+		$model_name=$_GET[model_name];
+		
+		$sql="SELECT * FROM model where model_name = '$model_name'";
+		$result = mysqli_query($conn, $sql);
+		$data = mysqli_fetch_array($result);
+	
+		?>
+
+
 		<table border='1'  width='100%'  align='center' valign='top' cellspacing='0' cellpadding='0' bgcolor='FFFFFF'>
 		  <form name='buys' action='./buys.php' method='post' enctype='multipart/form-data' >
 		  <input type='hidden' name='B_no[]' value='<?=$data[no]?>'>
@@ -44,15 +62,15 @@
 
 
 			<tr>
-			<td  width='25%' height='520' align='center'  bgcolor='#FFFFFF' >
-			<img src="./data/<?=$data[file01]?>" width='314' height='459'>
+			<td  width='35%' height='300' align='center'  bgcolor='#FFFFFF' >
+			<img src="./image/<?=$data[image_path]?>" width='314' height='280'>
 			</td>
-			<td  width='75%' height='520' align='left' valign='top'  bgcolor='#FFFFFF' class='drrr'>
+			<td  width='65%' height='200' align='left' valign='top'  bgcolor='#FFFFFF' class='drrr'>
 			<br> <br> 
 			상품상세 설명<br><br>
-			제목 <font class='subject'><?=$data[subject]?></font> <br>
-			홍보글 <font class='reference'><?=$data[reference]?></font> <br>
-			상품가 <font class='priced'><s><?=number_format($data[priced])?></s> 원</font>
+			모델 <font class='subject'><?=$data[model_name]?></font> <br>
+			차종 <font class='reference'><?=$data[car_kind]?></font> <br>
+			MAX 탑승인원 <font class='priced'><s><?=number_format($data[passenger])?></s> 원</font>
 			&nbsp; &nbsp;  &nbsp; &nbsp; 
 			판매가 <font class='price'><?=number_format($data[price])?> 원</font>
 			&nbsp; &nbsp;
@@ -72,4 +90,4 @@
 			
 	</div>
 </body>
-</html>
+</html> 
