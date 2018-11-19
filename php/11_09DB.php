@@ -37,7 +37,7 @@
 				<li class="navigation_list"><a href="reviewlist.php" class="navigation_link">리뷰</a></li>
 				<li class="navigation_list"><a href="" class="navigation_link">카쉐어링</a></li>
 				<li class="navigation_list"><a href="" class="navigation_link">공지사항</a></li>
-			  	<li class="barimg"><a href="de.php" class="barimg"><img src="./image/title.PNG" width="80" height="30" align="center"/></a></li>
+			  	<li class="barimg"><a href="de.php" class="barimg"><img src="./image/title.PNG" width="300" height="38" align="center"/></a></li>
 
 			</ul>
 		</div>
@@ -75,6 +75,14 @@
 			</td>
 
 			 </form>
+
+			 <tr>
+			 	<td width='100%'' height='50' align=right>
+			 		<a href="write.php"> car add </a>
+			 	</td>
+			 </tr>
+
+			 
 			
 
 	</div>
