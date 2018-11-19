@@ -76,14 +76,15 @@
 
 			 </form>
 
+
+
+			 <?if($member[level]=='2'or $member[level]=='1'){?>
 			 <tr>
 			 	<td width='100%'' height='50' align=right>
 			 		<a href="write.php"> car add </a>
 			 	</td>
 			 </tr>
-
-			 
-			
+			<?}else{}?>
 
 	</div>
 
@@ -140,7 +141,7 @@
 
 		mysqli_query($conn,"set names utf8");
 		$cnt=1;
-	    $sql = "SELECT * FROM model where $where and passenger=5";
+	    $sql = "SELECT * FROM model where $where";
 	    $result = mysqli_query($conn, $sql);
 	    while($data = mysqli_fetch_array($result)){
 
