@@ -2,8 +2,8 @@
 
 
 include("./db_connect.php");
-		$conn=dbconn();
-		mysqli_query($conn,"set names utf8");
+    $conn=dbconn();
+    mysqli_query($conn,"set names utf8");
 
 // if(!isset($_POST[user_id]) || !isset($_POST[user_pw]))
 //   exit;

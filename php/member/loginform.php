@@ -1,9 +1,14 @@
 <?php
 session_start();
-header('Content-Type: text/html; charset=utf8');
-include("./db_connect.php");
-		$conn=dbconn();
-		mysqli_query($conn,"set names utf8");
+header('Content-Type: text/html; charset=utf-8');
+
+$db = new mysqli("210.117.181.21", "s201414795", "tndqja07289!", "s201414795");
+$db->set_charset("utf-8");
+
+function mq($sql){
+  global $db;
+  return $db->query($sql);
+}
  ?>
 
 <!DOCTYPE html>
@@ -23,10 +28,10 @@ include("./db_connect.php");
 			<ul class="navigation clearfix">
 				<li class="navigation_list"><a href="loginform.php" class="navigation_link">로그인</a></li>
 				<li class="navigation_list"><a href="" class="navigation_link">이용방법</a></li>
-				<li class="navigation_list"><a href="" class="navigation_link">리뷰</a></li>
+				<li class="navigation_list"><a href="reviewlist.php" class="navigation_link">리뷰</a></li>
 				<li class="navigation_list"><a href="" class="navigation_link">카쉐어링</a></li>
 				<li class="navigation_list"><a href="" class="navigation_link">공지사항</a></li>
-				<li class="navigation_list"><a href="" class="navigation_link">이미지삽입</a></li>
+
         	<li class="navigation_list"><a href="de.php" class="navigation_link"><img src="./image/title.PNG" width="80" height="40" align="center"/></a></li>
 			</ul>
 		</div>
